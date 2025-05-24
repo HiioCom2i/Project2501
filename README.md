@@ -4,6 +4,8 @@ Jogo ambientado em São Paulo, mais especificamente no
 Bairro da Liberdade durante o aniversário da cidade, no dia 25 de janeiro. 
 O objetivo inicial será atravessar o lugar em busca do bolo.
 
+MOTOR JAM
+Tema: 25.1
 
 OBJETIVOS PARA A GAME JAM
 
