@@ -1,0 +1,849 @@
+fileFormatVersion: 2
+guid: 5aa88833b30c06747bdfedc5148cb19a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4083543167136710652
+    second: Chronos_0
+  - first:
+      213: -3336299289053128341
+    second: Chronos_1
+  - first:
+      213: -3218858259719252710
+    second: Chronos_2
+  - first:
+      213: -1356137890437310016
+    second: Chronos_3
+  - first:
+      213: 3584231256171562773
+    second: Chronos_4
+  - first:
+      213: -558522577886862412
+    second: Chronos_5
+  - first:
+      213: -5262549451817437456
+    second: Chronos_6
+  - first:
+      213: 2652202960254305214
+    second: Chronos_7
+  - first:
+      213: -1487318711560531130
+    second: Chronos_8
+  - first:
+      213: -7247954660003081257
+    second: Chronos_9
+  - first:
+      213: -1272977838759578312
+    second: Chronos_10
+  - first:
+      213: -1215006318087255902
+    second: Chronos_11
+  - first:
+      213: -3317102505129933938
+    second: Chronos_12
+  - first:
+      213: -1380776898081219513
+    second: Chronos_13
+  - first:
+      213: 838289634942000718
+    second: Chronos_14
+  - first:
+      213: -1342048743182309557
+    second: Chronos_15
+  - first:
+      213: -6404822034381452058
+    second: Chronos_16
+  - first:
+      213: 5385549622981286570
+    second: Chronos_17
+  - first:
+      213: 2160878835974549748
+    second: Chronos_18
+  - first:
+      213: -2236832574125563039
+    second: Chronos_19
+  - first:
+      213: -4149542502695177230
+    second: Chronos_20
+  - first:
+      213: -3042285870510625560
+    second: Chronos_21
+  - first:
+      213: 4403270589968083480
+    second: Chronos_22
+  - first:
+      213: -2358151290237948643
+    second: Chronos_23
+  - first:
+      213: 7733113039300602328
+    second: Chronos_24
+  - first:
+      213: -8272500911123384712
+    second: Chronos_25
+  - first:
+      213: -76748341707723649
+    second: Chronos_26
+  - first:
+      213: -6933442515033952907
+    second: Chronos_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Chronos_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 480
+        width: 46
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ab45395561ba741a147e4942a3482c
+      internalID: -1222214362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 46
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcdd6ccdd0e7274893449d65b125f50
+      internalID: 263257094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 416
+        width: 54
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5ddaf6efac2824c8056d5a80ccfef2
+      internalID: -1236410590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 416
+        width: 55
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5a5e014f505b445a76fdf5103be184
+      internalID: -827899709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 416
+        width: 53
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcafd11865a7ae44c98c966e380027d9
+      internalID: 198888672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 416
+        width: 53
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71918b902e1a26b48a404c161f435015
+      internalID: -1782310520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Run_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 368
+        width: 69
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33c78d7ab3d65d46a6342190542d56e
+      internalID: 240878054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Run_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 368
+        width: 56
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1705e0daa344542a61aab9b719f584
+      internalID: -234629431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Run_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 368
+        width: 79
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139672feaa73c52458d721375ecea22e
+      internalID: 1020815987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Run_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 368
+        width: 82
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9e9caa7c0a5564ab5da3f668b6b4a1
+      internalID: 107979479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 288
+        width: 54
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc8897ad892ef14c80c7d713d47edc6
+      internalID: 1058150523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 288
+        width: 37
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdecb3a9dc453fd4182d571726db1510
+      internalID: 975823033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 288
+        width: 44
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5c5ccc28841d74eade6c8ca6ed29b8
+      internalID: -1331651192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Kick_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 208
+        width: 71
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e430575c398b4a242b9f60b8782b2acd
+      internalID: 1786446320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Kick_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 208
+        width: 72
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66165343a12b9241bcbb139d65b3e22
+      internalID: 1398568336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_15
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 208
+        width: 69
+        height: 75
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f973893e61bd78543bdc9abf977b5410
+      internalID: 131479347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_16
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 208
+        width: 35
+        height: 71
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93708903c64247d4793851ed3271a882
+      internalID: -401538599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_17
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 208
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a4d91053055904999f00c609454a9e
+      internalID: -2050834220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Heavy_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 59
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238ade69a902f0e4eb732aa7eb5db6a3
+      internalID: 1861158184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Heavy_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 128
+        width: 47
+        height: 76
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5697e1457ba028744a989a0917ac0d00
+      internalID: -1171623421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Heavy_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 128
+        width: 71
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497466244dea6f546b5230a9624cb81a
+      internalID: 1242843208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Heavy_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 128
+        width: 53
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49df52e7eadf3447bd1297671f4ea22
+      internalID: 881240895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Block_0
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 128
+        width: 47
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294cfd0ee538a604395246d6269eb8fc
+      internalID: -300654551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Light_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 46
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53373d67579d96241a632f1d0287487d
+      internalID: 2079479153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Light_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 67
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0353a31bcaa792f4f87a9404b418bc88
+      internalID: 453934220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85257fa94c918143a290278f4823650
+      internalID: -1071505531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chronos_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 53
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eeb1a82c21ff34aabe62e58a75ec2e
+      internalID: 421398507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6dd16daf6df4aa245801544758c2a9f2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Chronos_10: 1058150523
+      Chronos_15: 131479347
+      Chronos_16: -401538599
+      Chronos_17: -2050834220
+      Chronos_20: -66326518
+      Chronos_Block_0: -300654551
+      Chronos_Heavy_Attack_0: 1861158184
+      Chronos_Heavy_Attack_1: -1171623421
+      Chronos_Heavy_Attack_2: 1242843208
+      Chronos_Heavy_Attack_3: 881240895
+      Chronos_Hurt_0: -1071505531
+      Chronos_Hurt_1: 421398507
+      Chronos_Idle_0: -1222214362
+      Chronos_Idle_1: 263257094
+      Chronos_Jump_0: 975823033
+      Chronos_Jump_1: -1331651192
+      Chronos_Kick_0: 1786446320
+      Chronos_Kick_1: 1398568336
+      Chronos_Light_Attack_0: 2079479153
+      Chronos_Light_Attack_1: 453934220
+      Chronos_Run_0: 240878054
+      Chronos_Run_1: -234629431
+      Chronos_Run_2: 1020815987
+      Chronos_Run_3: 107979479
+      Chronos_Walk_0: -1236410590
+      Chronos_Walk_1: -827899709
+      Chronos_Walk_2: 198888672
+      Chronos_Walk_3: -1782310520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
