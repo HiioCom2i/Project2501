@@ -56,7 +56,7 @@ public class GameCharacterController : MonoBehaviour
 
     public void ReceiveDamage(float damage)
     {
-
+        GetComponent<SpriteRenderer>().color = new Color(1, GetComponent<SpriteRenderer>().color.g - 0.1f, GetComponent<SpriteRenderer>().color.b - 0.1f, 1);
     }
 
     private void Flip()
