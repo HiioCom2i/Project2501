@@ -10,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
     InputAction jumpAction;
     InputAction attackAction;
 
-    bool attack = false;
-
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
@@ -24,13 +22,17 @@ public class PlayerMovement : MonoBehaviour
         if (jumpAction.IsPressed())
         {
             animator.SetBool("IsJumping", true);
+            if (!attackAction.IsPressed())
+            {
+                animator.SetBool("IsPunch", false);
+            }
         }
-
         if (attackAction.IsPressed())
         {
-            attack = true;
             animator.SetBool("IsPunch", true);
         }
+
+        Camera.main.transform.position = new(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 
         Rigidbody rb = GetComponent<Rigidbody>();
 
@@ -47,12 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (attack)
-        {
-            controller.Punch();
-        }
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         controller.Move(moveValue.x * Time.fixedDeltaTime, moveValue.y * Time.fixedDeltaTime, jumpAction.IsPressed());
-        attack = false;
     }
 }

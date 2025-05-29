@@ -1,11 +1,13 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class GameCharacterController : MonoBehaviour
 {
     private readonly float moveSpeed = 100.0f;
-    private readonly float jumpForce = 150.0f;
+    private readonly float jumpForce = 5.0f;
     private readonly bool airControl = true;
+
+    public float maxHealth = 3.0f;
+    public float attackDamage = 1.0f;
 
     private new Rigidbody rigidbody;
 
@@ -18,24 +20,24 @@ public class GameCharacterController : MonoBehaviour
 
     private void Awake()
     {
-        this.rigidbody = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
     {
-        this.grounded = Physics.CheckSphere(groundCheck.position, groundedRadius, groundLayer);
+        grounded = Physics.CheckSphere(groundCheck.position, groundedRadius, groundLayer);
     }
 
     public bool IsGrounded()
     {
-        return this.grounded;
+        return grounded;
     }
 
     public void Move(float moveX, float moveZ, bool jump)
     {
         if (grounded || airControl)
         {
-            if (moveX > 0 && !facingRight || moveX < 0 && facingRight)
+            if ((moveX > 0 && !facingRight) || (moveX < 0 && facingRight))
             {
                 Flip();
             }
@@ -46,20 +48,20 @@ public class GameCharacterController : MonoBehaviour
 
         if (grounded && jump)
         {
+            Vector3 targetVelocity = new(rigidbody.linearVelocity.z, jumpForce, rigidbody.linearVelocity.z);
+            rigidbody.linearVelocity = targetVelocity;
             grounded = false;
-            rigidbody.AddForce(new Vector3(0, jumpForce, 0));
         }
     }
 
-    public void Punch()
+    public void ReceiveDamage(float damage)
     {
-        // Colocar hitbox de soco
-        // Fazer um callback de remover pra quando acabar
+
     }
 
     private void Flip()
     {
         facingRight = !facingRight;
-        GetComponent<SpriteRenderer>().flipX = !facingRight;
+        transform.RotateAround(transform.position, transform.up, 180f);
     }
 }
