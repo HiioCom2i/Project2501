@@ -12,9 +12,9 @@ public class MenuPauseController : MonoBehaviour
     //Botões menu principal
     public void ResumirJogo()
     {
-        menuPause.SetActive(false);
-        menuPauseOpcoes.SetActive(false);
-        //Time.timeScale = 1; // volta o tempo ao normal
+        // menuPause.SetActive(false);
+        // menuPauseOpcoes.SetActive(false);
+        Time.timeScale = 1; // volta o tempo ao normal
     }
 
     public void Opcoes()

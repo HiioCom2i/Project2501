@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,15 +18,32 @@ public class PlayerMovement : MonoBehaviour
     private InputAction jumpAction;
     private InputAction attackAction;
 
+    private InputAction pauseAction;
+
+    public GameObject pauseMenu;
+
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
         attackAction = InputSystem.actions.FindAction("Attack");
+
+        pauseAction = InputSystem.actions.FindAction("Pause");
     }
 
     void Update()
     {
+        if (Time.timeScale > 0)
+        {
+            pauseMenu.SetActive(false);
+        }
+
+        if (pauseAction.IsPressed())
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+
         if (jumpAction.IsPressed())
         {
             animator.SetBool("IsJumping", true);

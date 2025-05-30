@@ -6,11 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Project/Scenes/UI/MenuSeiLa.unity
+    path: Assets/Project/Scenes/UI/MainMenu.unity
     guid: 319285602f7df87469d16aca9ab41194
+  - enabled: 1
+    path: Assets/Project/Scenes/CenaBriga.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Project/Scenes/Main/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Project/Scenes/Tests/Davi/Cenas/cena3D tests.unity
+    guid: 3bb703653b7c6284b86a03f7d8176e39
+  - enabled: 1
+    path: Assets/Project/Scenes/UI/GameOver.unity
+    guid: 5e5adf71b24b21542a685a898491d52d
+  - enabled: 1
+    path: Assets/Project/Scenes/UI/GameWin.unity
+    guid: cef50510c250dbc41bca1312fc19dd8c
+  - enabled: 1
+    path: Assets/Project/Scenes/UI/MenuPause.unity
+    guid: 6df1667b16a65fe468fca752b3802073
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 0cccb6f7ec22d1a4ba2e8fb1c37f4203, type: 3}
   m_UseUCBPForAssetBundles: 0
