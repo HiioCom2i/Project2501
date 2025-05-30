@@ -164,10 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9118e8d68744fe145baec81e28e83714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personagem: {fileID: 1531059965}
-  alturaChao: 0.02
-  escalaMinima: 0.5
-  escalaMaxima: 1
+  floorHeight: 0.02
 --- !u!212 &144243213
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -800,10 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9118e8d68744fe145baec81e28e83714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personagem: {fileID: 549437070}
-  alturaChao: 0.02
-  escalaMinima: 0.5
-  escalaMaxima: 1
+  floorHeight: 0.02
 --- !u!212 &690640248
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1277,10 +1271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9118e8d68744fe145baec81e28e83714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  personagem: {fileID: 299842418}
-  alturaChao: 0.02
-  escalaMinima: 0.5
-  escalaMaxima: 1
+  floorHeight: 0.02
 --- !u!212 &2016089904
 SpriteRenderer:
   m_ObjectHideFlags: 0

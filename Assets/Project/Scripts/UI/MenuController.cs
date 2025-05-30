@@ -14,13 +14,13 @@ public class MenuController : MonoBehaviour
     //Botões menu principal
     public void ComecarJogo()
     {
-        SceneManager.LoadScene("CenaSeiLa");
+        SceneManager.LoadScene("CenaBriga");
     }
 
     public void Opcoes()
     {
-        menuOpcoes.SetActive(true); 
-        menuPrincipal.SetActive(false); 
+        menuOpcoes.SetActive(true);
+        menuPrincipal.SetActive(false);
     }
 
 

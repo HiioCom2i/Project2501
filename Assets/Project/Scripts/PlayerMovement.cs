@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         if (isPunching)
         {
             RaycastHit[] hits = Physics.SphereCastAll(punchPoint.position, punchRange, transform.right, 0f, enemyLayers);
-            print(hits.Length);
             for (int i = 0; i < hits.Length; i++)
             {
                 GameCharacterController character = hits[i].collider.gameObject.GetComponent<GameCharacterController>();

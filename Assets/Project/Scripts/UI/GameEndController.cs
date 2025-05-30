@@ -3,11 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverController : MonoBehaviour
 {
-
     public GameObject menuGameOver;
-
-    void Start(){}
-    void Update(){}
 
     public void RecomecarJogo()
     {
