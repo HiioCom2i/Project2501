@@ -1,40 +1,35 @@
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 public class EnemyAI : MonoBehaviour
 {
     private enum State { IDLE, CHASE, ATTACK, COOLDOWN, HIT, DEAD }
     private State currentState = State.IDLE;
 
+    public GameCharacterController controller;
+
     [Header("AI Settings")]
-    [SerializeField] public float detectionRange = 5f;
-    [SerializeField] public float attackRange = 1.5f;
-    [SerializeField] public float moveSpeed = 2f;
-    [SerializeField] public float verticalSpeed = 1f;
+    public float detectionRange = 5f;
+    public float attackRange = 1.5f;
 
     [Header("Combat Settings")]
-    [SerializeField] public float health = 3f;
-    [SerializeField] public float attackDamage = 1f;
-    [SerializeField] public float attackCooldown = 1.5f;
-    [SerializeField] public float stunDuration = 0.5f;
+    public float attackCooldown = 1.5f;
+    public float stunDuration = 0.5f;
 
     private Transform player;
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private SpriteRenderer[] spriteRenderers;
 
     private float cooldownTimer;
     private float stunTimer;
 
-    // Para movimento vertical limitado
-    private float minY = -2.5f;
-    private float maxY = -0.5f;
-
     // Delegate para eventos de morte
     public delegate void OnDeathDelegate();
-    public event OnDeathDelegate onDeath;
+    public event OnDeathDelegate OnDeath;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
         // Encontrar o player
@@ -46,6 +41,14 @@ public class EnemyAI : MonoBehaviour
         else
         {
             Debug.LogError("Player não encontrado! Certifique-se de que o Player tem a tag 'Player'");
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (currentState == State.CHASE)
+        {
+            ChasePlayer();
         }
     }
 
@@ -66,7 +69,6 @@ public class EnemyAI : MonoBehaviour
                 break;
 
             case State.CHASE:
-                ChasePlayer();
                 if (distanceToPlayer <= attackRange)
                 {
                     currentState = State.ATTACK;
@@ -103,55 +105,35 @@ public class EnemyAI : MonoBehaviour
 
     void ChasePlayer()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
-
-        // Movimento com velocidades diferentes para X e Y
-        Vector2 moveVelocity = new Vector2(
-            direction.x * moveSpeed,
-            direction.y * verticalSpeed
-        );
-
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
-
-        // Limitar movimento vertical
-        Vector3 pos = transform.position;
-        pos.y = Mathf.Clamp(pos.y, minY, maxY);
-        transform.position = pos;
-
-        // Flip sprite baseado na direção
-        if (direction.x != 0)
-        {
-            transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
-        }
+        Vector3 direction = player.position - transform.position;
+        print(direction);
+        controller.Move(direction.x, direction.z, false);
     }
 
     void PerformAttack()
     {
         Debug.Log("Enemy Attack!");
-
-        // Aqui você pode adicionar dano ao player
-        // Por enquanto, apenas um log
     }
 
     public void TakeDamage(float damage)
     {
-        if (currentState == State.DEAD) return;
+        // if (currentState == State.DEAD) return;
 
-        health -= damage;
+        // health -= damage;
 
-        if (health <= 0)
-        {
-            Die();
-        }
-        else
-        {
+        // if (health <= 0)
+        // {
+        //     // Die();
+        // }
+        // else
+        // {
             // Entrar em estado de stun
-            currentState = State.HIT;
-            stunTimer = stunDuration;
+        //    currentState = State.HIT;
+        //    stunTimer = stunDuration;
 
             // Feedback visual
-            StartCoroutine(FlashRed());
-        }
+        //    StartCoroutine(FlashRed());
+        //}
     }
 
     void Die()
@@ -161,7 +143,7 @@ public class EnemyAI : MonoBehaviour
         // Desabilitar colisão
         GetComponent<Collider2D>().enabled = false;
 
-        onDeath?.Invoke();
+        OnDeath?.Invoke();
         // Feedback visual de morte (cair e desaparecer)
         StartCoroutine(DeathAnimation());
     }
@@ -185,7 +167,7 @@ public class EnemyAI : MonoBehaviour
         float timer = 0;
         while (timer < 1f)
         {
-            transform.position += Vector3.down * 2f * Time.deltaTime;
+            transform.position += 2f * Time.deltaTime * Vector3.down;
             timer += Time.deltaTime;
             yield return null;
         }

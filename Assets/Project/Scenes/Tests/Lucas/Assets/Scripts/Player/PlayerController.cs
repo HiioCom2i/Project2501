@@ -4,25 +4,25 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] public float moveSpeed = 5f;
-    [SerializeField] public float verticalSpeed = 2.5f;
+    public float moveSpeed = 5f;
+    public float verticalSpeed = 2.5f;
 
     [Header("Combat Settings")]
-    [SerializeField] public float attackRange = 1.5f;
-    [SerializeField] public float attackDamage = 1f;
-    [SerializeField] public float attackCooldown = 0.5f;
+    public float attackRange = 1.5f;
+    public float attackDamage = 1f;
+    public float attackCooldown = 0.5f;
 
-    private Rigidbody2D rb;
+    private Rigidbody rb;
     private float nextAttackTime = 0f;
-    private Vector2 movement;
+    private Vector3 movement;
 
     // Limites do cenário
-    private float minY = -2.5f;
-    private float maxY = -0.5f;
+    private readonly float minY = -2.5f;
+    private readonly float maxY = -0.5f;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
         gameObject.tag = "Player"; // Importante para a IA encontrar o player
     }
 
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Movimento com velocidades diferentes para X e Y
-        Vector2 moveVelocity = new Vector2(movement.x * moveSpeed, movement.y * verticalSpeed);
+        Vector3 moveVelocity = new(movement.x * moveSpeed, movement.y * verticalSpeed, movement.z);
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
 
         // Limitar movimento vertical
@@ -74,10 +74,10 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Centro do ataque: {attackCenter}");
 
         // Detectar inimigos na área de ataque
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackCenter, attackRange);
+        Collider[] hitEnemies = Physics.OverlapSphere(attackCenter, attackRange);
         Debug.Log($"Colliders detectados: {hitEnemies.Length}");
 
-        foreach (Collider2D enemy in hitEnemies)
+        foreach (Collider enemy in hitEnemies)
         {
             Debug.Log($"Colidiu com: {enemy.name}, Tag: {enemy.tag}");
             if (enemy.CompareTag("Enemy"))

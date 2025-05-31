@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameCharacterController : MonoBehaviour
 {
-    private readonly float moveSpeed = 100.0f;
+    public float moveSpeed = 100.0f;
     private readonly float jumpForce = 5.0f;
     private readonly bool airControl = true;
 
