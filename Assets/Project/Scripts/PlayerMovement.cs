@@ -77,8 +77,8 @@ public class PlayerMovement : MonoBehaviour
 
         for (int i = 0; i < hits.Length; i++)
         {
-            GameCharacterController character = hits[i].collider.gameObject.GetComponent<GameCharacterController>();
-            character.ReceiveDamage(controller.attackDamage);
+            EnemyAI character = hits[i].collider.gameObject.GetComponent<EnemyAI>();
+            character.TakeDamage(controller.attackDamage);
         }
 
         yield return new WaitForSeconds(punchDelay);

@@ -5,6 +5,7 @@ public class EnemyAI : MonoBehaviour
 {
     private enum State { IDLE, CHASE, ATTACK, COOLDOWN, HIT, DEAD }
     private State currentState = State.IDLE;
+    public Animator animator;
 
     public GameCharacterController controller;
 
@@ -15,6 +16,10 @@ public class EnemyAI : MonoBehaviour
     [Header("Combat Settings")]
     public float attackCooldown = 1.5f;
     public float stunDuration = 0.5f;
+
+    [Header("Status")]
+    public float maxHealth = 3f;
+    private float currentHealth;
 
     private Transform player;
     private Rigidbody rb;
@@ -31,6 +36,7 @@ public class EnemyAI : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        currentHealth = maxHealth;
 
         // Encontrar o player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -73,7 +79,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     currentState = State.ATTACK;
                 }
-                else if (distanceToPlayer > detectionRange * 1.5f) // Margem para não ficar entrando e saindo
+                else if (distanceToPlayer > detectionRange * 1.5f)
                 {
                     currentState = State.IDLE;
                 }
@@ -106,45 +112,56 @@ public class EnemyAI : MonoBehaviour
     void ChasePlayer()
     {
         Vector3 direction = player.position - transform.position;
-        print(direction);
         controller.Move(direction.x, direction.z, false);
     }
 
     void PerformAttack()
     {
-        Debug.Log("Enemy Attack!");
+        animator.SetBool("IsPunch", true);
+
+        if (player != null)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            if (distanceToPlayer <= attackRange)
+            {
+                GameCharacterController playerController = player.GetComponent<GameCharacterController>();
+                if (playerController != null)
+                {
+                    playerController.ReceiveDamage(controller.attackDamage);
+                }
+            }
+        }
+
+        animator.SetBool("IsPunch", false);
     }
 
     public void TakeDamage(float damage)
     {
-        // if (currentState == State.DEAD) return;
+        if (currentState == State.DEAD) return;
 
-        // health -= damage;
+        currentHealth -= damage;
 
-        // if (health <= 0)
-        // {
-        //     // Die();
-        // }
-        // else
-        // {
-            // Entrar em estado de stun
-        //    currentState = State.HIT;
-        //    stunTimer = stunDuration;
+        Debug.Log($"Enemy took {damage} damage. Current health: {currentHealth}");
 
-            // Feedback visual
-        //    StartCoroutine(FlashRed());
-        //}
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            currentState = State.HIT;
+            stunTimer = stunDuration;
+            StartCoroutine(FlashRed());
+        }
     }
 
     void Die()
     {
         currentState = State.DEAD;
 
-        // Desabilitar colisão
-        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider>().enabled = false;
 
         OnDeath?.Invoke();
-        // Feedback visual de morte (cair e desaparecer)
         StartCoroutine(DeathAnimation());
     }
 

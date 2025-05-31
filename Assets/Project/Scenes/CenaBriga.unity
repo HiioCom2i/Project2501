@@ -547,11 +547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f8b7140745141bd9048bc249d148ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1531059966}
   controller: {fileID: 299842413}
   detectionRange: 5
   attackRange: 0.7
   attackCooldown: 1.5
   stunDuration: 0.5
+  maxHealth: 3
 --- !u!1 &711192068
 GameObject:
   m_ObjectHideFlags: 0
