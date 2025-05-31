@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6b29f8702855f944d8fc069eea18ac98
+guid: 061e47aca3bc144478dda4e77c163f3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4671945181998610337
-    second: imagemDerrota_0
+      213: 3748425351803905432
+    second: titulo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: imagemDerrota_0
+      name: titulo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 275
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5800e82c9ae92fb0800000000000000
-      internalID: -4671945181998610337
+      spriteID: 89527595ff4150430800000000000000
+      internalID: 3748425351803905432
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      imagemDerrota_0: -4671945181998610337
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
