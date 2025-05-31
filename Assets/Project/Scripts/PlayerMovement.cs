@@ -18,21 +18,18 @@ public class PlayerMovement : MonoBehaviour
     private InputAction moveAction;
     private InputAction jumpAction;
     private InputAction attackAction;
-
     private InputAction pauseAction;
 
     public GameObject pauseMenu;
 
-    public float punchDelay = 1f;
+    public float punchDelay = 0.2f;
+
     private void Start()
     {
         moveAction = InputSystem.actions.FindAction("Move");
         jumpAction = InputSystem.actions.FindAction("Jump");
         attackAction = InputSystem.actions.FindAction("Attack");
         pauseAction = InputSystem.actions.FindAction("Pause");
-
-        // Registra o evento de ataque apenas quando o botão for pressionado
-        attackAction.performed += ctx => TryPunch();
     }
 
     void Update()
@@ -57,7 +54,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        Camera.main.transform.position = new(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+        if (attackAction.triggered && !isPunching)
+        {
+            StartCoroutine(Punch());
+        }
+
+        Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
 
         Rigidbody rb = GetComponent<Rigidbody>();
         animator.SetFloat("VerticalSpeed", rb.linearVelocity.y);
@@ -69,10 +71,9 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Punch()
     {
         isPunching = true;
+        animator.SetBool("IsPunch", true);
 
         RaycastHit[] hits = Physics.SphereCastAll(punchPoint.position, punchRange, transform.right, 0f, enemyLayers);
-
-        yield return new WaitForSeconds(punchDelay);
 
         for (int i = 0; i < hits.Length; i++)
         {
@@ -80,32 +81,20 @@ public class PlayerMovement : MonoBehaviour
             character.ReceiveDamage(controller.attackDamage);
         }
 
-        isPunching = false;
-    }
+        yield return new WaitForSeconds(punchDelay);
 
-    private void TryPunch()
-    {
-        if (!isPunching)
-        {
-            animator.SetBool("IsPunch", true);
-            StartCoroutine(Punch());
-        }
+        EndPunch();
     }
 
     public void EndPunch()
     {
         animator.SetBool("IsPunch", false);
+        isPunching = false;
     }
 
     void FixedUpdate()
     {
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         controller.Move(moveValue.x * Time.fixedDeltaTime, moveValue.y * Time.fixedDeltaTime, jumpAction.IsPressed());
-    }
-
-    private void OnDestroy()
-    {
-        if (attackAction != null)
-            attackAction.performed -= ctx => TryPunch();
     }
 }
