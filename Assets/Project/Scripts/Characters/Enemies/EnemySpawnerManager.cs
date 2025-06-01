@@ -31,7 +31,7 @@ public class EnemySpawnerTrigger : MonoBehaviour
             {
                 foreach (GameObject entity in entities)
                 {
-                    if (entity.activeSelf) break;
+                    if (entity != null && entity.activeSelf) break;
                     allEntitiesDead = true;
                 }
             }
