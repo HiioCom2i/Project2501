@@ -6,15 +6,13 @@ using static EnemyAI;
 public class GameCharacterController : MonoBehaviour
 {
     public float moveSpeed = 100.0f;
-    private readonly float jumpForce = 5.0f;
-    private readonly bool airControl = true;
+    private const float jumpForce = 5.0f;
 
-    public float maxHealth = 3.0f;
     public float attackDamage = 1.0f;
 
     private new Rigidbody rigidbody;
 
-    const float groundedRadius = 0.05f;
+    private const float groundedRadius = 0.05f;
     public LayerMask groundLayer;
     private bool grounded;
     public Transform groundCheck;
@@ -51,21 +49,18 @@ public class GameCharacterController : MonoBehaviour
 
     public void Move(float moveX, float moveZ, bool jump)
     {
-        if (grounded || airControl)
+        if ((moveX > 0 && !facingRight) || (moveX < 0 && facingRight))
         {
-            if ((moveX > 0 && !facingRight) || (moveX < 0 && facingRight))
-            {
-                Flip();
-            }
-
-            Vector3 targetVelocity = new(moveSpeed * moveX, rigidbody.linearVelocity.y, moveSpeed * moveZ);
-            rigidbody.linearVelocity = targetVelocity;
+            Flip();
         }
+
+        Vector3 targetVelocity = new(moveSpeed * moveX, rigidbody.linearVelocity.y, moveSpeed * moveZ);
+        rigidbody.linearVelocity = targetVelocity;
 
         if (grounded && jump)
         {
-            Vector3 targetVelocity = new(rigidbody.linearVelocity.z, jumpForce, rigidbody.linearVelocity.z);
-            rigidbody.linearVelocity = targetVelocity;
+            Vector3 jumpVelocity = new(rigidbody.linearVelocity.z, jumpForce, rigidbody.linearVelocity.z);
+            rigidbody.linearVelocity = jumpVelocity;
             grounded = false;
         }
     }
