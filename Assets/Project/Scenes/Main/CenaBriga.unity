@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 1116649435}
   - component: {fileID: 1116649436}
   - component: {fileID: 1116649437}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: EnemySpawnerWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1021,7 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: a9bf68d0b9478474c9326f60b216d9ba, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 2624
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 384
