@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/UI/MainMenu.unity
     guid: 319285602f7df87469d16aca9ab41194
   - enabled: 1
-    path: Assets/Project/Scenes/CenaBriga.unity
+    path: Assets/Project/Scenes/Main/CenaBriga.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Project/Scenes/Main/SampleScene.unity
