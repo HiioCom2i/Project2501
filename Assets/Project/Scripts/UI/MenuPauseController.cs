@@ -1,13 +1,9 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuPauseController : MonoBehaviour
 {
     public GameObject menuPause;
     public GameObject menuPauseOpcoes;
-
-    void Start(){}
-    void Update(){}
 
     //Botões menu principal
     public void ResumirJogo()

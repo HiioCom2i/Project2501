@@ -3,13 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-
     public GameObject menuPrincipal;
     public GameObject menuOpcoes;
-
-    void Start(){}
-    void Update(){}
-
 
     //Botões menu principal
     public void ComecarJogo()

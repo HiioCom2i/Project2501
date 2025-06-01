@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -22,7 +21,6 @@ public class EnemyAI : MonoBehaviour
     private float currentHealth;
 
     private Transform player;
-    private Rigidbody rb;
     private SpriteRenderer[] spriteRenderers;
 
     private float cooldownTimer;
@@ -33,19 +31,17 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         currentHealth = maxHealth;
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            player = playerObj.transform;
-        }
-        else
+        if (playerObj == null)
         {
             Debug.LogError("Player não encontrado! Certifique-se de que o Player tem a tag 'Player'");
+            return;
         }
+
+        player = playerObj.transform;
     }
 
     private void FixedUpdate()
@@ -104,6 +100,12 @@ public class EnemyAI : MonoBehaviour
                 }
                 break;
         }
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        animator.SetFloat("VerticalSpeed", rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x) + Mathf.Abs(rb.linearVelocity.z));
+        animator.SetBool("IsJumping", !controller.IsGrounded() && rb.linearVelocity.y > 0.1f);
+        animator.SetBool("IsFalling", !controller.IsGrounded() && rb.linearVelocity.y < -0.1f);
     }
 
     void ChasePlayer()
@@ -116,20 +118,15 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetBool("IsPunch", true);
 
-        if (player != null)
-        {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            if (distanceToPlayer <= attackRange)
-            {
-                GameCharacterController playerController = player.GetComponent<GameCharacterController>();
-                if (playerController != null)
-                {
-                    playerController.ReceiveDamage(controller.attackDamage);
-                }
-            }
-        }
+        if (player == null) return;
 
-        animator.SetBool("IsPunch", false);
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer > attackRange) return;
+
+        GameCharacterController playerController = player.GetComponent<GameCharacterController>();
+        if (playerController == null) return;
+
+        playerController.ReceiveDamage(controller.attackDamage);
     }
 
     public void TakeDamage(float damage)
@@ -186,6 +183,11 @@ public class EnemyAI : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public void EndPunch()
+    {
+        animator.SetBool("IsPunch", false);
     }
 
     void OnDrawGizmosSelected()
