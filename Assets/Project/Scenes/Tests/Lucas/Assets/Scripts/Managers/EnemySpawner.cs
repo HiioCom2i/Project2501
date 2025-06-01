@@ -1,16 +1,22 @@
+using System.Linq;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject spawnObject;
 
-    public void SpawnEntities()
+    public GameObject[] SpawnEntities()
     {
+        GameObject[] entities = { };
+
         Transform[] spawnTransforms = gameObject.GetComponentsInChildren<Transform>();
         foreach (Transform spawnTransform in spawnTransforms)
         {
-            _ = Instantiate(spawnObject, spawnTransform.position, Quaternion.identity);
+            GameObject entity = Instantiate(spawnObject, spawnTransform.position, Quaternion.identity);
+            entities.Append(entity);
         }
         Destroy(gameObject);
+
+        return entities;
     }
 }
