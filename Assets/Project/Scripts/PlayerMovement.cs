@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject pauseMenu;
 
     public float punchDelay = 0.2f;
+    public AudioClip punchSound;
+
 
     private void Start()
     {
@@ -78,7 +80,10 @@ public class PlayerMovement : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
         {
             EnemyAI character = hits[i].collider.gameObject.GetComponent<EnemyAI>();
-            character.TakeDamage(controller.attackDamage);
+            if (character != null)
+            {
+                character.TakeDamage(controller.attackDamage);
+            }
         }
 
         yield return new WaitForSeconds(punchDelay);

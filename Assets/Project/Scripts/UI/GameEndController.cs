@@ -7,7 +7,7 @@ public class GameOverController : MonoBehaviour
 
     public void RecomecarJogo()
     {
-        SceneManager.LoadScene("CenaDoJogo");
+        SceneManager.LoadScene("CenaBriga");
     }
     public void Sair()
     {
@@ -18,6 +18,6 @@ public class GameOverController : MonoBehaviour
     //Botões menu opções
     public void VoltarParaMenu()
     {
-        SceneManager.LoadScene("CenaDoMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

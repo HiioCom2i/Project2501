@@ -28,7 +28,6 @@ public class EnemyAI : MonoBehaviour
     private float cooldownTimer;
     private float stunTimer;
 
-    // Delegate para eventos de morte
     public delegate void OnDeathDelegate();
     public event OnDeathDelegate OnDeath;
 
@@ -38,7 +37,6 @@ public class EnemyAI : MonoBehaviour
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         currentHealth = maxHealth;
 
-        // Encontrar o player
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
         {
@@ -64,7 +62,6 @@ public class EnemyAI : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // State Machine
         switch (currentState)
         {
             case State.IDLE:
@@ -169,18 +166,17 @@ public class EnemyAI : MonoBehaviour
     {
         foreach (var sr in spriteRenderers)
         {
-            sr.color = Color.white;
+            sr.color = Color.red;
         }
         yield return new WaitForSeconds(0.1f);
         foreach (var sr in spriteRenderers)
         {
-            sr.color = Color.red;
+            sr.color = Color.white;
         }
     }
 
     System.Collections.IEnumerator DeathAnimation()
     {
-        // Cair
         float timer = 0;
         while (timer < 1f)
         {
@@ -189,13 +185,11 @@ public class EnemyAI : MonoBehaviour
             yield return null;
         }
 
-        // Destruir
         Destroy(gameObject);
     }
 
     void OnDrawGizmosSelected()
     {
-        // Visualizar ranges no editor
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
 
