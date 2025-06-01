@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -36,14 +35,13 @@ public class EnemyAI : MonoBehaviour
         currentHealth = maxHealth;
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-        {
-            player = playerObj.transform;
-        }
-        else
+        if (playerObj == null)
         {
             Debug.LogError("Player não encontrado! Certifique-se de que o Player tem a tag 'Player'");
+            return;
         }
+
+        player = playerObj.transform;
     }
 
     private void FixedUpdate()
@@ -120,18 +118,15 @@ public class EnemyAI : MonoBehaviour
     {
         animator.SetBool("IsPunch", true);
 
-        if (player != null)
-        {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            if (distanceToPlayer <= attackRange)
-            {
-                GameCharacterController playerController = player.GetComponent<GameCharacterController>();
-                if (playerController != null)
-                {
-                    playerController.ReceiveDamage(controller.attackDamage);
-                }
-            }
-        }
+        if (player == null) return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer > attackRange) return;
+
+        GameCharacterController playerController = player.GetComponent<GameCharacterController>();
+        if (playerController == null) return;
+
+        playerController.ReceiveDamage(controller.attackDamage);
     }
 
     public void TakeDamage(float damage)
