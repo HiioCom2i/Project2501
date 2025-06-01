@@ -22,7 +22,6 @@ public class EnemyAI : MonoBehaviour
     private float currentHealth;
 
     private Transform player;
-    private Rigidbody rb;
     private SpriteRenderer[] spriteRenderers;
 
     private float cooldownTimer;
@@ -33,7 +32,6 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         currentHealth = maxHealth;
 
@@ -104,6 +102,12 @@ public class EnemyAI : MonoBehaviour
                 }
                 break;
         }
+
+        Rigidbody rb = GetComponent<Rigidbody>();
+        animator.SetFloat("VerticalSpeed", rb.linearVelocity.y);
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x) + Mathf.Abs(rb.linearVelocity.z));
+        animator.SetBool("IsJumping", !controller.IsGrounded() && rb.linearVelocity.y > 0.1f);
+        animator.SetBool("IsFalling", !controller.IsGrounded() && rb.linearVelocity.y < -0.1f);
     }
 
     void ChasePlayer()
@@ -128,8 +132,6 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
-
-        animator.SetBool("IsPunch", false);
     }
 
     public void TakeDamage(float damage)
@@ -186,6 +188,11 @@ public class EnemyAI : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public void EndPunch()
+    {
+        animator.SetBool("IsPunch", false);
     }
 
     void OnDrawGizmosSelected()
