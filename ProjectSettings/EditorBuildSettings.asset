@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Main/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Project/Scenes/Tests/Davi/Cenas/cena3D tests.unity
+    path: Assets/Assets/Fase 1.unity
     guid: 3bb703653b7c6284b86a03f7d8176e39
   - enabled: 1
     path: Assets/Project/Scenes/UI/GameOver.unity
