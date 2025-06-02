@@ -6,7 +6,7 @@ using static EnemyAI;
 public class GameCharacterController : MonoBehaviour
 {
     public float moveSpeed = 100.0f;
-    private const float jumpForce = 5.0f;
+    public const float jumpForce = 7.0f;
 
     public float attackDamage = 1.0f;
 

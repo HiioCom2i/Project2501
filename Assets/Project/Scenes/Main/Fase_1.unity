@@ -47254,7 +47254,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -50656,6 +50656,14 @@ PrefabInstance:
       propertyPath: musica
       value: 
       objectReference: {fileID: 1956107412}
+    - target: {fileID: 724630123318512074, guid: 9c0c21a3c79a52549b2873c203644c63, type: 3}
+      propertyPath: moveSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238293643680037792, guid: 9c0c21a3c79a52549b2873c203644c63, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2442260380238346981, guid: 9c0c21a3c79a52549b2873c203644c63, type: 3}
       propertyPath: pauseMenu
       value: 
