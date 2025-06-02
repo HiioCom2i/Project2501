@@ -9,7 +9,7 @@ public class MenuController : MonoBehaviour
     //Botões menu principal
     public void ComecarJogo()
     {
-        SceneManager.LoadScene("CenaBriga");
+        SceneManager.LoadScene("Fase_1");
     }
 
     public void Opcoes()
