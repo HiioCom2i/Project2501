@@ -149,7 +149,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Die()
+    protected virtual void Die()
     {
         currentState = State.DEAD;
 

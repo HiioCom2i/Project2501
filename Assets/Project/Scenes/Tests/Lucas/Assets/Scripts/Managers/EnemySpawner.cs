@@ -5,6 +5,11 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject spawnObject;
 
+    private void Start()
+    {
+        SpawnEntities();
+    }
+
     public GameObject[] SpawnEntities()
     {
         GameObject[] entities = { };
