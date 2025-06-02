@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -118,6 +118,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -125,12 +138,12 @@ TextureImporter:
       name: idle-Sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 6
-        width: 41
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 7
+        width: 39
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +160,12 @@ TextureImporter:
       name: idle-Sheet_1
       rect:
         serializedVersion: 2
-        x: 71
-        y: 6
-        width: 43
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 72
+        y: 7
+        width: 41
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +182,12 @@ TextureImporter:
       name: idle-Sheet_2
       rect:
         serializedVersion: 2
-        x: 136
-        y: 6
-        width: 44
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 137
+        y: 7
+        width: 42
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +204,12 @@ TextureImporter:
       name: idle-Sheet_3
       rect:
         serializedVersion: 2
-        x: 204
-        y: 6
-        width: 38
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 205
+        y: 7
+        width: 36
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 542f2bd03abc6b545b323845fde51f5f
     internalID: 0
     vertices: []
     indices: 
@@ -222,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      idle-Sheet_0: 1061527380459089461
+      idle-Sheet_1: 6207771810069409013
+      idle-Sheet_2: -2380374124312247100
+      idle-Sheet_3: -4915520102833538046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

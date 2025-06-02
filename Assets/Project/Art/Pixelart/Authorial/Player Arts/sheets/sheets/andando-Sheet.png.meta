@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -118,6 +118,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -125,12 +138,12 @@ TextureImporter:
       name: andando-Sheet_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 7
-        width: 40
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10
+        y: 8
+        width: 38
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -147,12 +160,12 @@ TextureImporter:
       name: andando-Sheet_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 6
-        width: 40
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 71
+        y: 7
+        width: 38
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +182,12 @@ TextureImporter:
       name: andando-Sheet_2
       rect:
         serializedVersion: 2
-        x: 131
-        y: 7
-        width: 42
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 132
+        y: 8
+        width: 40
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +204,12 @@ TextureImporter:
       name: andando-Sheet_3
       rect:
         serializedVersion: 2
-        x: 194
-        y: 6
-        width: 42
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 195
+        y: 7
+        width: 40
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d820c6209402b0547a9403bc6e572d8b
     internalID: 0
     vertices: []
     indices: 
@@ -222,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      andando-Sheet_0: -5689655750724600100
+      andando-Sheet_1: -8048639708302616780
+      andando-Sheet_2: -4092386059653226614
+      andando-Sheet_3: 9012334658201809049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

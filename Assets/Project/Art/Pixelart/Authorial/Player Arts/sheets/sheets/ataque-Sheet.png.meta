@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -112,6 +112,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -119,12 +132,12 @@ TextureImporter:
       name: ataque-Sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 4
-        width: 41
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 5
+        width: 39
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -141,12 +154,12 @@ TextureImporter:
       name: ataque-Sheet_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 4
-        width: 55
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 74
+        y: 5
+        width: 53
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -163,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3580c3aeee1f59840a2a9bd01febc4c7
     internalID: 0
     vertices: []
     indices: 
@@ -172,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ataque-Sheet_0: -4164488562502547883
+      ataque-Sheet_1: 3592657250482515440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
