@@ -212,7 +212,7 @@ MonoBehaviour:
   controller: {fileID: 724630123318512074}
   animator: {fileID: 8419022398628668485}
   punchPoint: {fileID: 6837307588871322802}
-  punchRange: 1.3
+  punchRange: 1.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -238,7 +238,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 7334090095985156320}
-  vidaMax: 3
+  vidaMax: 5
 --- !u!114 &118778257474450481
 MonoBehaviour:
   m_ObjectHideFlags: 0
