@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -138,12 +138,12 @@ TextureImporter:
       name: enemyAndando-Sheet_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 7
-        width: 23
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 23
+        y: 8
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: enemyAndando-Sheet_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 7
-        width: 23
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 86
+        y: 8
+        width: 21
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,12 +182,12 @@ TextureImporter:
       name: enemyAndando-Sheet_2
       rect:
         serializedVersion: 2
-        x: 150
-        y: 7
-        width: 22
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 151
+        y: 8
+        width: 20
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -204,12 +204,12 @@ TextureImporter:
       name: enemyAndando-Sheet_3
       rect:
         serializedVersion: 2
-        x: 214
-        y: 7
-        width: 22
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 215
+        y: 8
+        width: 20
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -226,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cc8bb90ef14042648b7344731dc9bf94
     internalID: 0
     vertices: []
     indices: 
