@@ -7,7 +7,7 @@ public class GameOverController : MonoBehaviour
 
     public void RecomecarJogo()
     {
-        SceneManager.LoadScene("CenaBriga");
+        SceneManager.LoadScene("Fase_1");
     }
     public void Sair()
     {
