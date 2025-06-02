@@ -64,8 +64,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4.04, y: 4.04, z: 4.04}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7334090095985156320}
   - {fileID: 702327982081522339}
@@ -135,7 +135,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5478101609107417499}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -212,7 +212,7 @@ MonoBehaviour:
   controller: {fileID: 724630123318512074}
   animator: {fileID: 8419022398628668485}
   punchPoint: {fileID: 6837307588871322802}
-  punchRange: 0.5
+  punchRange: 1.3
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1ff8557c168c9429e1a9d76216c423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  moveSpeed: 300
   attackDamage: 1
   groundLayer:
     serializedVersion: 2
