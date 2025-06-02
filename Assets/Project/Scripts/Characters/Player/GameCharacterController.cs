@@ -123,4 +123,9 @@ public class GameCharacterController : MonoBehaviour
         facingRight = !facingRight;
         transform.RotateAround(transform.position, transform.up, 180f);
     }
+
+    public float getVida()
+    {
+        return vida;
+    }
 }

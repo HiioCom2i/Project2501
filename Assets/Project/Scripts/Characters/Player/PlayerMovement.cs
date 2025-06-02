@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform punchPoint;
     public float punchRange = 0.5f;
     public LayerMask enemyLayers;
+
+    public Text xisVida;
+    public Camera cameraToMove;
 
     public bool isPunching;
 
@@ -60,7 +64,19 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Punch());
         }
 
-        Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
+        // Atualizando vida na UI
+        float controllerVida = controller.getVida();
+        xisVida.text = "X " + controllerVida.ToString("0");
+
+
+        if (cameraToMove != null)
+        {
+            cameraToMove.transform.position = new Vector3(
+                transform.position.x,
+                cameraToMove.transform.position.y,
+                cameraToMove.transform.position.z
+            );
+        }
 
         Rigidbody rb = GetComponent<Rigidbody>();
         animator.SetFloat("VerticalSpeed", rb.linearVelocity.y);
